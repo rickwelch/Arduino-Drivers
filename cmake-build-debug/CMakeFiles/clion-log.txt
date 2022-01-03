@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "B:\projects\Rick\Arduino Drivers"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: B:/projects/Rick/Arduino Drivers/cmake-build-debug
