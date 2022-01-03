@@ -1,6 +1,6 @@
 Built within the PlatformIO framework, this development library of Arduino device classes is part of an
 Arduino web (html) service provider project. Each device class supports a specific I/O device or I/O function
-and requires four methods. See the Device class for more information.
+and requires four methods. See the README.md for more information.
 
 ________________________________________________________________________________________________
 this is the README PlatformIO creates in the lib directory when the project is created.
