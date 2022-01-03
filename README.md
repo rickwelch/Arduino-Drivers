@@ -11,6 +11,7 @@
         
 - DigitalIn
     - Reads a digital input
+    - Abstracts device status in each state, on, off, OK, fault, etc.
     - Methods
         - init() - sets the _pin to INPUT mode with a pull-up resistor
         - name() - returns DigitalIn_{_pin}
@@ -19,21 +20,42 @@
         
 - DigitalOut
     - Sets the state HIGH or LOW of an output pin
+    - Abstracts device status in each state, on, off, OK, fault, etc.
     - Methods
         - init() - sets the _pin to OUTPUT mode
         - name() - returns DigitalOut_{_pin}
         - status() - returns string "DigitalOut_1":"current state of the output, 1 or 0"
         - command_check(target_device,command) - If device is the target set _pin to HIGH if command=1 or to LOW if command=0
 
-- AnalogIn
+- AnalogIn _(planned)_
     - Reads input from an analog _pin
     - Methods
    
-- AnalogOut
+- AnalogOut _(planned)_
     - Performs an analogWrite to _pin
 
 - Moisture
-    - Returns an an        
+    - Returns analog value (0-1023) from Capacitive Soil Moisture Sensors. 
+    - Will be the basis for the AnalogIn driver.   
+    
+- PulsedDigitalOut
+    - Sets a digital output for a passed period of milliseconds    
         
 ## Writing your own drivers
 
+If you can use one of the above drivers you should copy it and name it something the driver represents, like Tank or Pump.
+
+If you need something custom, your driver should use Driver as a base class and must containe the four methods described above.
+
+Both status() and command_check() methods return a String. This string must be proper JSON and start with a comma. In the project's include folder an array of drivers is set up and these methods are called in sequence. Output from each method concatenated on to the return JSON string
+
+The command_check(target,arguments) method should check target and if it is your devices name, then parse the arguments and do some action. Return any success or failure information in proper JSON format. 
+
+should return a string in the following format
+```
+, "Command Status":" < your success or error message or data goes here> "
+``` 
+The status() command should return a string in the following format
+```
+, " < your device name > ":" < whatever status in proper JSON format > "
+```
