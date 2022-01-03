@@ -1,7 +1,9 @@
 //
 // Created by rick_ on 11/19/2021.
 //
-
+/**
+ * @TODO - rename class to PulsedDigitalOutput
+ */
 #include "TimedRelay.h"
 
 #include <Arduino.h>
