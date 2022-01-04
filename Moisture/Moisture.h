@@ -16,7 +16,7 @@ public:
     Moisture(int pin);
     void init(void);
     String name();
-    bool command_check(String target, String command);
+    String command_check(String target, String command);
     String device_status();
 };
 

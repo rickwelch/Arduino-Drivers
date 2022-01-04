@@ -20,8 +20,8 @@ String Moisture::name() {
     return _device_name;
 }
 
-bool Moisture::command_check(String target, String command) {
-    return false;  // this device is read only
+String Moisture::command_check(String target, String command) {
+    return ""  // this device is read only
 }
 
 String Moisture::device_status() {
