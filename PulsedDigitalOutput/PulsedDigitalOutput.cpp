@@ -44,7 +44,6 @@ String PulsedDigitalOutput::command_check(String target, String command) {
             return String(",\"Command Status\":\"" + _device_name + " was enabled for " + command_actual + " milliseconds.\"");
         }
         return String(",\"Command Status\":\"Parameter error for device " + _device_name + ".\"");
-
     }
     return "";
 }
