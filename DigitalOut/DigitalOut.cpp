@@ -1,7 +1,6 @@
 /**
- * Abstracts Digital Out pins
+ * Abstracts Digital Output pins
  *
- * @TODO - set a default state and a
  * 2/11/2021 - Created.
  */
 
@@ -9,7 +8,7 @@
 
 #include <Arduino.h>
 
-DigitalOut::DigitalOut(int pin) : Device::Device(pin) {          // Device assigns pin to class variable _pin
+DigitalOut::DigitalOut(int pin) : Device::Device(pin) {      // base class Device assigns pin to class variable _pin
     init();
 }
 

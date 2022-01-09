@@ -1,13 +1,14 @@
-//
-// Created by rick_ on 11/15/2021.
-//
+/**
+ * Abstracts Digital Input pins
+ *
+ * 2/11/2021 - Created.
+ */
 
 #include "DigitalIn.h"
 
 #include <Arduino.h>
 
-DigitalIn::DigitalIn(int pin): Device::Device(pin)
-{
+DigitalIn::DigitalIn(int pin): Device::Device(pin) {     // base class Device assigns pin to class variable _pin
     init();
 }
 
