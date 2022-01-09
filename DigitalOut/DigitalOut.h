@@ -14,7 +14,7 @@ class DigitalOut: public Device{
  * In the example states below, will report status as '", "<device name>":"ON"' when state is LOW
  * and also set state to HIGH on service command: <BASE_URL>/command/<device name>/OFF
  *
- * The driver will power up in the OFF state
+ * The driver will power up in the OFF state (_current_state)
  */
 private:
     String _device_name;          // is set in init() on power-up.

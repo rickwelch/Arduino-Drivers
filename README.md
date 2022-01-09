@@ -1,5 +1,5 @@
 Built within the PlatformIO framework, this development library of Arduino device drivers is part of an
-Arduino web (html) service provider project. Each device class supports a specific I/O device or I/O function
+Arduino web (HTTP) service provider project. Each device class supports a specific I/O device or I/O function
 and requires four methods described below.
 
 ## Included drivers
