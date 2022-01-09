@@ -51,7 +51,7 @@ and requires four methods described below.
 
 If you can use one of the above drivers you should copy it and name it something the driver represents, like Tank or Pump.
 
-If you need something custom, your driver should use Driver as a base class and must containe the four methods described above.
+If you need something custom, your driver should use Driver class as a base class and must contain the four methods described above.
 
 Both status() and command_check() methods return a String. This string must be proper JSON and start with a comma. In the project's include folder an array of drivers is set up and these methods are called in sequence. Output from each method concatenated on to the return JSON string
 
@@ -65,3 +65,4 @@ The status() command should return a string in the following format
 ```
 , " < your device name > ":" < whatever status in proper JSON format > "
 ```
+Do not forget the leading comma (,) for both outputs. This output is concatenated with other drives to form the JSON status return.
